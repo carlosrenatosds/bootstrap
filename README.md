@@ -10,13 +10,13 @@ Instalador/configurador multiplataforma (Windows 11 e Linux Debian/Ubuntu/AlmaLi
 
 **Linux:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<seu-user>/bootstrap/main/setup-tools.py -o setup-tools.py
+curl -fsSL https://raw.githubusercontent.com/carlosrenatosds/bootstrap/main/setup-tools.py -o setup-tools.py
 python3 setup-tools.py menu
 ```
 
 **Windows (PowerShell):**
 ```powershell
-iwr -Uri "https://raw.githubusercontent.com/<seu-user>/bootstrap/main/setup-tools.py" -OutFile "setup-tools.py"; python setup-tools.py menu
+iwr -Uri "https://raw.githubusercontent.com/carlosrenatosds/bootstrap/main/setup-tools.py" -OutFile "setup-tools.py"; python setup-tools.py menu
 ```
 
 > Pré-requisito: Python 3 instalado. No Debian já vem. No Windows: Microsoft Store ou `winget install Python.Python.3`.
