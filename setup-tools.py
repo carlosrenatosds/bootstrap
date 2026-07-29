@@ -345,7 +345,7 @@ def relaunch_as_admin_windows():
         f'@echo off\r\n'
         f'"{sys.executable}" "{SCRIPT_PATH}" {params}\r\n'
         f'pause\r\n'
-        f'del "%~f0"\r\n'
+        f'del "%~f0" & exit\r\n'
     )
 
     print("Privilégios de Administrador necessários. Solicitando elevação (UAC)...")
