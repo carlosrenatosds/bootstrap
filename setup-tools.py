@@ -1032,6 +1032,8 @@ def get_main_packages() -> list[str]:
         pkgs.append("xclip")
 
     if is_debian():
+        pkgs.append("needrestart")
+        pkgs.append("libnotify-bin")
         pkgs.append("libcupsimage2t64")
         if is_debian_13():
             pkgs.extend(["python3-dev", "python3-venv"])
