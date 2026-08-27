@@ -1022,7 +1022,7 @@ def get_main_packages() -> list[str]:
     """Retorna a lista de pacotes sugeridos para a plataforma/distro atual."""
     pkgs = ["curl", "espeak-ng", "libreoffice-java-common",
             "python3-virtualenv", "rclone", "restic", "rsync", "strace",
-            "wget", "wl-clipboard"]
+            "wget", "wl-clipboard", "needrestart"]
 
     if IS_WINDOWS:
         return ["Rclone.Rclone", "Restic.Restic", "GNU.Wget2"]
@@ -1032,7 +1032,6 @@ def get_main_packages() -> list[str]:
         pkgs.append("xclip")
 
     if is_debian():
-        pkgs.append("needrestart")
         pkgs.append("libnotify-bin")
         pkgs.append("libcupsimage2t64")
         if is_debian_13():
@@ -1048,6 +1047,7 @@ def get_main_packages() -> list[str]:
         pkgs.append("ttf-mscorefonts-installer")
 
     if is_almalinux():
+        pkgs.append("libnotify")
         pkgs.append("libunwind")
         pkgs.extend(["font-manager", "msimonson-anonymouspro-fonts", "gtk3"])
         if is_almalinux_10():
