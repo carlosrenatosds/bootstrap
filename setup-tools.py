@@ -1192,13 +1192,13 @@ def setup_gtk():
         return
 
     # Notificações e comportamento
-    run(["gsettings", "set", "org.gnome.desktop.notifications",
-         "show-in-lock-screen", "false"])
-    run(["gsettings", "set", "org.gnome.mutter",
-         "check-alive-timeout", "120000"])
-    run(["gsettings", "set", "org.gnome.shell",
-         "always-show-log-out", "true"])
-
+    run(["gsettings", "set", "org.gnome.desktop.notifications", "show-in-lock-screen", "false"])
+    run(["gsettings", "set", "org.gnome.mutter", "check-alive-timeout", "120000"])
+    run(["gsettings", "set", "org.gnome.shell", "always-show-log-out", "true"])
+    run(["gsettings", "set", "org.gnome.software", "allow-updates", "false"])
+    run(["gsettings", "set", "org.gnome.software", "download-updates", "false"])
+    run(["gsettings", "set", "org.gnome.software", "download-updates-notify", "false"])
+         
     # Imagens em botões e menus (GTK)
     if is_debian_12() or is_almalinux_9():
         run(["gsettings", "set",
